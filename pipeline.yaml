@@ -1,0 +1,19 @@
+pipeline:
+    name: turbo launcher
+    identifier: turbo_launcher
+    projectIdentifier: turbo_launcher
+    orgIdentifier: default
+    tags: {}
+    properties:
+        ci:
+            codebase:
+                connectorRef: turbo
+                build: <+input>
+    stages:
+        - stage:
+              name: turborun
+              identifier: turborun
+              description: ""
+              type: CI
+              spec:
+                  cloneCodebase: true
